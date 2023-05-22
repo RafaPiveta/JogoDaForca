@@ -9,4 +9,5 @@ Para testá-lo:
 
 1. Clone esse repositório usando: git clone git@github.com:RafaPiveta/JogoDaForca.git
 2. Mova para o repositório apropriado: cd JogoDaForca
-3. Rode o código e divirta-se!
+3. Tome certeza de que todos os arquivos estão no mesmo repositório (incluindo os .png)
+4. Rode o código e divirta-se!
