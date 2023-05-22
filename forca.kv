@@ -1,0 +1,90 @@
+<Quadro>
+    orientation: "vertical"
+    GridLayout:
+        cols: 5
+        rows: 1
+        size_hint: (1,0.2)
+        Label:
+            text: "          Tentativas:"
+            size_hint: (0.5,1)
+            font_size: 18
+        Label:
+            text: ""
+            id: tentativas
+            size_hint: (0.3,1)
+            font_size: 18
+        Label:
+            text: ""
+        Label:
+            text: ""
+        Label:
+            text: ""
+    BoxLayout:
+        orientation: "vertical"
+        GridLayout:
+            cols: 1
+            rows: 2
+            Label:
+                id: palavra_aleatoria
+                font_size: 40
+            Label:
+                text: "Letras já selecionadas: "
+                id: letras_selecionadas
+                font_size: 30
+                size_hint: (1,0.3)
+            Widget:
+                canvas:
+                    Rectangle:
+                        pos: (10,420)
+                        size: (100,250)
+                        source: root.imagemForca
+            Image:
+                id: imagem
+                pos: (60, 465)
+                size: (70,120)
+                source: "Fundo Preto.png"
+    BoxLayout:
+        orientation: "vertical"
+        GridLayout:
+            cols: 3
+            rows: 1
+            Label:
+                text: "   Digite \numa letra: "
+                size_hint: (0.3,1)
+                font_size: 25
+            TextInput:
+                text: ""
+                id: letra
+                multiline: False
+                size_hint: (0.2,1)
+            Button:
+                id: confirma
+                text: "Submit"
+                on_press: root.confirmaLetra()
+                background_color: "#00006F"
+                font_size: 40
+        GridLayout:
+            cols: 3
+            rows: 1
+            Label:
+                text: "Som"
+                size_hint: (0.3,1)
+                font_size: 25
+            Spinner:
+                id: desativaAudio
+                on_text: root.desativaSom()
+                size_hint: (0.2,1)
+                values: ("ON","OFF")
+                text: "ON"
+                background_color: "grey"
+                font_size: 25
+            Button:
+                text: "Restart"
+                on_press: root.recomecaJogo()
+                background_color: "grey"
+                font_size: 40
+        Button:
+            size_hint: (1,0.3)
+            text: "SAIR"
+            on_press: root.sair()
+            font_size: 25
